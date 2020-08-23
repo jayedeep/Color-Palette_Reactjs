@@ -11,7 +11,6 @@ class PaletteList extends Component {
   }
 
   goToPalette(id) {
-    console.log("hi");
     this.props.history.push(`/palette/${id}`);
   }
   render() {
@@ -21,6 +20,7 @@ class PaletteList extends Component {
         <div className={classes.container}>
           <nav className={classes.nav}>
             <h1>React colors</h1>
+            <Link to="/palette/new">Create Palette</Link>
           </nav>
           <div className={classes.palettes}>
             {palettes.map((palette) => (
